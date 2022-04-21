@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{403F66B3-A265-40E6-A058-01591560A688}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proyecto2104Form</RootNamespace>
+    <AssemblyName>Proyecto2104Form</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syncfusion.Core.WinForms, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Data.WinForms, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfInput.WinForms, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditar.Designer.cs">
+      <DependentUpon>FormEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\Producto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="servicio\ProductoServicio.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditar.resx">
+      <DependentUpon>FormEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagenes\001-arrow down.png" />
+    <Content Include="imagenes\002-arrow down.png" />
+    <Content Include="imagenes\003-arrow up.png" />
+    <Content Include="imagenes\004-arrow up.png" />
+    <Content Include="imagenes\005-back arrow.png" />
+    <Content Include="imagenes\006-brightness.png" />
+    <Content Include="imagenes\007-bulleye.png" />
+    <Content Include="imagenes\008-check.png" />
+    <Content Include="imagenes\009-check.png" />
+    <Content Include="imagenes\010-check.png" />
+    <Content Include="imagenes\011-check.png" />
+    <Content Include="imagenes\012-checkmark.png" />
+    <Content Include="imagenes\013-checkmark.png" />
+    <Content Include="imagenes\014-checkmark.png" />
+    <Content Include="imagenes\015-chevron.png" />
+    <Content Include="imagenes\016-double chevron.png" />
+    <Content Include="imagenes\017-clipboard.png" />
+    <Content Include="imagenes\018-clock.png" />
+    <Content Include="imagenes\019-close.png" />
+    <Content Include="imagenes\020-close.png" />
+    <Content Include="imagenes\021-command.png" />
+    <Content Include="imagenes\022-copy.png" />
+    <Content Include="imagenes\023-cut.png" />
+    <Content Include="imagenes\024-dashboard.png" />
+    <Content Include="imagenes\025-dashboard.png" />
+    <Content Include="imagenes\026-delete.png" />
+    <Content Include="imagenes\027-dot.png" />
+    <Content Include="imagenes\028-download.png" />
+    <Content Include="imagenes\029-ellipsis.png" />
+    <Content Include="imagenes\030-ellipsis.png" />
+    <Content Include="imagenes\031-ellipsis.png" />
+    <Content Include="imagenes\032-ellipsis.png" />
+    <Content Include="imagenes\033-feather.png" />
+    <Content Include="imagenes\034-filter.png" />
+    <Content Include="imagenes\035-flag.png" />
+    <Content Include="imagenes\036-floppy disk.png" />
+    <Content Include="imagenes\037-funnel.png" />
+    <Content Include="imagenes\038-gauge.png" />
+    <Content Include="imagenes\039-goal.png" />
+    <Content Include="imagenes\040-graph.png" />
+    <Content Include="imagenes\041-graph.png" />
+    <Content Include="imagenes\042-menu.png" />
+    <Content Include="imagenes\043-menu.png" />
+    <Content Include="imagenes\044-menu.png" />
+    <Content Include="imagenes\045-heart.png" />
+    <Content Include="imagenes\046-home.png" />
+    <Content Include="imagenes\047-home.png" />
+    <Content Include="imagenes\048-home.png" />
+    <Content Include="imagenes\049-home.png" />
+    <Content Include="imagenes\050-info.png" />
+    <Content Include="imagenes\051-info.png" />
+    <Content Include="imagenes\052-inside.png" />
+    <Content Include="imagenes\053-lifebuoy.png" />
+    <Content Include="imagenes\054-maximize.png" />
+    <Content Include="imagenes\055-minimize.png" />
+    <Content Include="imagenes\056-minus.png" />
+    <Content Include="imagenes\057-minus.png" />
+    <Content Include="imagenes\058-minus.png" />
+    <Content Include="imagenes\059-minus.png" />
+    <Content Include="imagenes\060-on.png" />
+    <Content Include="imagenes\061-outside.png" />
+    <Content Include="imagenes\062-pencil.png" />
+    <Content Include="imagenes\063-pencil.png" />
+    <Content Include="imagenes\064-pin.png" />
+    <Content Include="imagenes\065-pin.png" />
+    <Content Include="imagenes\066-plus.png" />
+    <Content Include="imagenes\067-plus.png" />
+    <Content Include="imagenes\068-plus.png" />
+    <Content Include="imagenes\069-plus.png" />
+    <Content Include="imagenes\070-power.png" />
+    <Content Include="imagenes\071-print.png" />
+    <Content Include="imagenes\072-printer.png" />
+    <Content Include="imagenes\073-question.png" />
+    <Content Include="imagenes\074-question.png" />
+    <Content Include="imagenes\075-reload.png" />
+    <Content Include="imagenes\076-remove.png" />
+    <Content Include="imagenes\077-remove.png" />
+    <Content Include="imagenes\078-remove.png" />
+    <Content Include="imagenes\079-search.png" />
+    <Content Include="imagenes\080-search.png" />
+    <Content Include="imagenes\081-search.png" />
+    <Content Include="imagenes\082-share.png" />
+    <Content Include="imagenes\083-share.png" />
+    <Content Include="imagenes\084-share.png" />
+    <Content Include="imagenes\085-signal.png" />
+    <Content Include="imagenes\086-star.png" />
+    <Content Include="imagenes\087-stop.png" />
+    <Content Include="imagenes\088-time.png" />
+    <Content Include="imagenes\089-trash.png" />
+    <Content Include="imagenes\090-upload.png" />
+    <Content Include="imagenes\091-warning.png" />
+    <Content Include="imagenes\092-warning.png" />
+    <Content Include="imagenes\093-waving.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
